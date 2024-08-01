@@ -2,8 +2,10 @@ image:
   file: .gitpod.Dockerfile
 
 tasks:
-  - init: dotnet --version
-    command: dotnet new classlib -n QuickLookFontPreview
+  - init: |
+      bash -c 'dotnet --version'
+    command: |
+      bash -c 'dotnet new classlib -n QuickLookFontPreview'
 
 vscode:
   extensions:
